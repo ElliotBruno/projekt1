@@ -15,7 +15,10 @@ body.Beyblade {
 }
 
 body.Nerf {
-  background-image: url();
+  background-image: url(../Images/1000_F_196637560_hetRPseUhtVn2pjf3oS7J7T9ofAYXTQ5.jpg);
+}
+body.pokemon {
+  background-image: url(../Images/1009413215.jpg);
 }
 body.Conntacts {
   background-image: url();
@@ -75,4 +78,7 @@ h1 {
 footer {
   text-decoration: none;
   display: flexbox;
+}
+.Guns {
+  display: flex;
 }
