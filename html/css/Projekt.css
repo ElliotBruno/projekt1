@@ -2,12 +2,17 @@
   margin: 0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Tilt+Prism&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Tilt+Prism&display=swap");
+
 body,
 html {
   height: 100%;
+}
+
+a {
+  margin-bottom: 20px;
 }
 
 /* The hero image */
@@ -38,7 +43,7 @@ html {
 
 body.kulor {
   background-image: url(../Images/marble-game-3968902.jpg);
-  background-size: contain;
+  background-size: cover;
 }
 
 body.Beyblade {
@@ -48,10 +53,12 @@ body.Beyblade {
 
 body.Nerf {
   background-image: url(../Images/1000_F_196637560_hetRPseUhtVn2pjf3oS7J7T9ofAYXTQ5.jpg);
+  background-size: cover;
 }
 
 body.pokemon {
   background-image: url(../Images/1009413215.jpg);
+  background-size: cover;
 }
 
 body.Contacts {
@@ -98,24 +105,19 @@ body.About_us {
 
 .Beyblades {
   column-gap: 3px;
-  /* width: 200px;
-  height: 200px; */
-}
-
-.Arenas {
-  column-gap: 3px;
-}
-
-.Launchers {
-  column-gap: 3px;
-}
-
-.Shop {
-  text-decoration: none;
 }
 
 .Guns {
   display: flex;
+  column-gap: 3px;
+}
+
+.Marbles {
+  column-gap: 3px;
+}
+img {
+  width: 400px;
+  height: 400px;
 }
 
 h1,
@@ -127,11 +129,20 @@ h3 {
   margin-right: 395px;
 }
 
+h4 {
+  line-height: 200%;
+  margin-left: 370px;
+  width: 45%;
+  margin-top: 150px;
+  margin-bottom: 70px;
+  text-align: center;
+  color: midnightblue;
+}
+
 p {
   width: 30%;
   line-height: 120%;
   margin-top: 150px;
-  margin-left: 440px;
   text-align: center;
 }
 
@@ -150,8 +161,25 @@ input[type="password"] {
   font-size: large;
 }
 
+section {
+  background-color: cornflowerblue;
+  display: flex;
+}
+.Shop {
+  color: midnightblue;
+  padding-top: 12px;
+  padding-left: 50px;
+  padding-right: 250px;
+  text-decoration: none;
+  transition: 1s;
+  font-family: "Orbitron", sans-serif;
+}
+.Shop:hover {
+  color: blue;
+  text-transform: uppercase;
+}
+
 nav {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: cadetblue;
@@ -173,29 +201,38 @@ nav:hover {
   }
 }
 
-section {
-  column-count: 3;
-}
-
 footer {
   text-decoration: none;
   display: flexbox;
-  position: fixed;
+}
+i {
+  justify-content: space-between;
+  display: flex;
+  padding-left: 200px;
+  padding-right: 200px;
+  height: 200px;
+  padding-top: 3%;
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 415px) {
   nav {
-    border-width: 100%;
     flex-direction: column;
-    background-color: aqua;
+    background-color: dodgerblue;
+    padding-bottom: 0px;
+    padding-top: 0px;
   }
-  /* footer{
-
-  } */
-  /* p {
-      margin-bottom: 210px;
-      margin-left: 500px;
-    } */
+  section {
+    flex-direction: column;
+    background-color: darkred;
+  }
+  footer {
+    display: flex;
+  }
+  i {
+    padding-top: 10%;
+    padding-left: 40px;
+    padding-right: 80px;
+  }
 
   body.Shop {
     background-image: url(../Images/1-flat-marble-bleu-mixed-18-mm-flat-glass-marbles-removebg-preview.png);
@@ -210,9 +247,33 @@ footer {
   }
 
   body.About_us {
-    background-image: url(../Images/867842cb8067fb11bdba48b2ae72aadb.gif);
+    background-image: url(../Images/eb.gif);
+    background-size: cover;
+    background-size: 99%;
+  }
+  body.pokemon {
+    background-image: url(../Images/s-l1600.jpg);
     background-size: cover;
   }
+  .Beyblades {
+    width: 50%;
+  }
+  p {
+    width: 100%;
+    line-height: normal;
+    margin-top: 70px;
+  }
+  h4 {
+    margin-top: 320px;
+    padding-bottom: 50px;
+    margin-left: 120px;
+    color: royalblue;
+    line-height: 100%;
+    width: 1000%;
+  }
+  /* img {
+    width: 99%;
+  } */
 
   .Text {
     margin-right: 400px;
