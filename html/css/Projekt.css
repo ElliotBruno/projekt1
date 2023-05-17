@@ -2,6 +2,12 @@
   margin: 0;
 }
 
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Tilt+Prism&display=swap");
@@ -103,18 +109,25 @@ body.About_us {
   color: firebrick;
 }
 
-.Beyblades {
-  column-gap: 3px;
-}
-
 .Guns {
   display: flex;
   column-gap: 3px;
 }
 
-.Marbles {
+.Ammo {
+  display: flex;
   column-gap: 3px;
+  margin-left: 30px;
 }
+
+.Cards {
+  display: flex;
+}
+
+.Packs {
+  display: flex;
+}
+
 img {
   width: 400px;
   height: 400px;
@@ -125,7 +138,7 @@ h2,
 h3 {
   font-family: "Tilt Prism", cursive;
   columns: auto;
-  display: inline-block;
+  /* display: inline-block; */
   margin-right: 395px;
 }
 
@@ -252,17 +265,37 @@ i {
     background-size: 99%;
   }
   body.pokemon {
-    background-image: url(../Images/s-l1600.jpg);
+    background-image: url(../Images/desktop-wallpaper-iphone-black-pattern-carbon-leather-metal.jpg);
     background-size: cover;
   }
   .Beyblades {
     width: 50%;
   }
+  .Guns {
+    flex-direction: column;
+  }
+
+  .Ammo {
+    flex-direction: column;
+  }
+  .Cards {
+    flex-direction: column;
+  }
+  .Packs {
+    flex-direction: column;
+  }
+
   p {
     width: 100%;
     line-height: normal;
     margin-top: 70px;
   }
+
+  h2 {
+    color: darkolivegreen;
+    font-family: "Orbitron", sans-serif;
+  }
+
   h4 {
     margin-top: 320px;
     padding-bottom: 50px;
@@ -277,6 +310,182 @@ i {
   /* img {
     width: 99%;
   } */
+
+  .Text {
+    margin-right: 400px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    background-color: dodgerblue;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  section {
+    flex-direction: column;
+    background-color: darkred;
+  }
+  footer {
+    display: flex;
+  }
+  i {
+    padding-top: 10%;
+    padding-left: 40px;
+    padding-right: 80px;
+  }
+
+  body.Shop {
+    background-image: url(../Images/1-flat-marble-bleu-mixed-18-mm-flat-glass-marbles-removebg-preview.png);
+  }
+
+  body.Sign {
+    background-image: url(../Images/sunset-sky-horizon-hd-phone-wallpaper-1170x2532.jpg);
+  }
+
+  body.Conntacts {
+    background-size: contain;
+  }
+
+  body.About_us {
+    background-image: url(../Images/eb.gif);
+    background-size: cover;
+    background-size: 99%;
+  }
+  body.pokemon {
+    background-image: url(../Images/desktop-wallpaper-iphone-black-pattern-carbon-leather-metal.jpg);
+    background-size: cover;
+  }
+  .Beyblades {
+    width: 50%;
+  }
+  .Guns {
+    flex-direction: column;
+  }
+
+  .Ammo {
+    flex-direction: column;
+  }
+  .Cards {
+    flex-direction: column;
+  }
+  .Packs {
+    flex-direction: column;
+  }
+
+  p {
+    width: 100%;
+    line-height: normal;
+    margin-top: 70px;
+  }
+
+  h2 {
+    color: darkolivegreen;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  h4 {
+    margin-top: 320px;
+    padding-bottom: 50px;
+    margin-left: 120px;
+    color: royalblue;
+    line-height: 100%;
+    width: 1000%;
+  }
+  h3 {
+    margin-left: 70px;
+  }
+  /* img {
+  width: 99%;
+} */
+
+  .Text {
+    margin-right: 400px;
+  }
+}
+@media only screen and (max-width: 820px) {
+  nav {
+    flex-direction: column;
+    background-color: dodgerblue;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  section {
+    flex-direction: column;
+    background-color: darkred;
+  }
+  footer {
+    display: flex;
+  }
+  i {
+    padding-top: 10%;
+    padding-left: 40px;
+    padding-right: 80px;
+  }
+
+  body.Shop {
+    background-image: url(../Images/1-flat-marble-bleu-mixed-18-mm-flat-glass-marbles-removebg-preview.png);
+  }
+
+  body.Sign {
+    background-image: url(../Images/sunset-sky-horizon-hd-phone-wallpaper-1170x2532.jpg);
+  }
+
+  body.Conntacts {
+    background-size: contain;
+  }
+
+  body.About_us {
+    background-image: url(../Images/eb.gif);
+    background-size: cover;
+    background-size: 99%;
+  }
+  body.pokemon {
+    background-image: url(../Images/desktop-wallpaper-iphone-black-pattern-carbon-leather-metal.jpg);
+    background-size: cover;
+  }
+  .Beyblades {
+    width: 50%;
+  }
+  .Guns {
+    flex-direction: column;
+  }
+
+  .Ammo {
+    flex-direction: column;
+  }
+  .Cards {
+    flex-direction: column;
+  }
+  .Packs {
+    flex-direction: column;
+  }
+
+  p {
+    width: 100%;
+    line-height: normal;
+    margin-top: 70px;
+  }
+
+  h2 {
+    color: darkolivegreen;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  h4 {
+    margin-top: 320px;
+    padding-bottom: 50px;
+    margin-left: 120px;
+    color: royalblue;
+    line-height: 100%;
+    width: 1000%;
+  }
+  h3 {
+    margin-left: 70px;
+  }
+  /* img {
+width: 99%;
+} */
 
   .Text {
     margin-right: 400px;
