@@ -271,6 +271,9 @@ i {
     line-height: 100%;
     width: 1000%;
   }
+  h3 {
+    margin-left: 70px;
+  }
   /* img {
     width: 99%;
   } */
