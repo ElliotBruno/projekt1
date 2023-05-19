@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Tilt+Prism&display=swap");
+
+      @import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+
+      .dark-mode {
+        background-color: RGB(237, 41, 57);
+        color: white;
+      }
+      .dark-mode:h4 {
+        color: aliceblue;
+      }
+    </style>
     <title>Document</title>
     <script
       src="https://kit.fontawesome.com/0f8029f50a.js"
       crossorigin="anonymous"
     ></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Tilt+Prism&display=swap");
-    </style>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
-    </style>
+
     <link rel="stylesheet" href="../css/Projekt.css" />
   </head>
   <body class="About_us">
@@ -22,13 +30,27 @@
       <nav>
         <h1>Black Mall</h1>
         <a class="item" href="Shop.html">Shop</a>
-        <a class="item" href="About_us.html">About us</a>
         <a class="item" href="Contacts.html">Contacts</a>
         <a class="item" href="Sign.html">Sign in</a>
-        <a class="item" href="Projekt.html">Home</a>
+        <div class="home">
+          <a href="Projekt.html"><i class="fas fa-home"></i></a>
+        </div>
       </nav>
     </header>
 
+    <button onclick="myFunction()">Change mode</button>
+
+    <div class="Hidden">
+      <h6>
+        So, if you dare, venture into this hidden realm, where Nerf guns pierce
+        the veil of reality, Pokémon cards unlock enchanted worlds, marbles
+        ignite ancient rivalries, and Beyblades unleash hidden powers. But
+        remember, in this murky underbelly, what you seek comes with a price,
+        paid not only in currency but also in the innocence that slips away with
+        each clandestine transaction.
+      </h6>
+    </div>
+    <!-- Information About the Website -->
     <div class="Text">
       <h4>
         In the shadows of the bustling city, hidden from prying eyes, lies a
@@ -38,7 +60,8 @@
         haven where beyblades, marbles, Nerf guns, and Pokémon cards reign
         supreme.
       </h4>
-      <h4>
+
+      <h5>
         The Black Mall exists as a parallel universe, hidden beneath the surface
         of innocent play. Beyblades spin, marbles roll, Nerf darts fly, and
         Pokémon cards shuffle, all in the clandestine pursuit of childhood
@@ -46,7 +69,7 @@
         cannot overlook the risks involved. As with any black market, it exists
         beyond the boundaries of legality and casts shadows on the purity of
         childhood innocence.
-      </h4>
+      </h5>
     </div>
 
     <footer>
@@ -66,6 +89,6 @@
       </div>
     </footer>
 
-    <script src="projekt.js"></script>
+    <script src="../css/projekt.js"></script>
   </body>
 </html>
