@@ -66,10 +66,7 @@
 //   }
 // });
 
-function myFunction() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}
+
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -78,3 +75,22 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+mapboxgl.accessToken = 'https://api.mapbox.com/styles/v1/{username}/{style_id}/static/{overlay}/{lon},{lat},{zoom},{bearing},{pitch}|{bbox}|{auto}/{width}x{height}{@2x}';
+      
+function initMap() {
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11', // Väljer en stil som passar tillbehov
+    center: [18.1524, 59.4239], // Anpassar centrumkoordinaterna till Ytterby plats
+    zoom: 15 // Justerar zoomnivån
+  });
+
+  // Markör
+  var marker = new mapboxgl.Marker()
+    .setLngLat([18.1524, 59.4239]) // Koordinater
+    .addTo(map);
+}
+
+// Kör initMap() när sidan har laddats
+document.addEventListener('DOMContentLoaded', initMap);
