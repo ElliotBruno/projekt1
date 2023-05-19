@@ -9,12 +9,54 @@
       src="https://kit.fontawesome.com/0f8029f50a.js"
       crossorigin="anonymous"
     ></script>
+ 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Tilt+Prism&display=swap");
-    </style>
-    <style>
+            @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Tilt+Prism&display=swap");
+
       @import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .mobile-container {
+        margin: auto;
+        background-color: royalblue;
+        color: white;
+      }
+
+      .topnav {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .topnav #myLinks {
+        display: none;
+      }
+
+      .topnav a {
+        color: goldenrod;
+        text-decoration: none;
+        font-size:x-large ;
+        display: block;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .active {
+        background-color: #04aa6d;
+        color: white;
+      }
+      .icon {
+        height: 100px;
+      }
     </style>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="../css/Projekt.css" />
   </head>
   <body class="Contacts">
@@ -23,11 +65,59 @@
         <h1>Black Mall</h1>
         <a class="item" href="Shop.html">Shop</a>
         <a class="item" href="About_us.html">About us</a>
-        <a class="item" href="Contacts.html">Contacts</a>
         <a class="item" href="Sign.html">Sign in</a>
-        <a class="item" href="Projekt.html">Home</a>
+        <div class="home">
+          <a href="Projekt.html"><i class="fas fa-home"></i></a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </nav>
     </header>
+    <div class="mobile-container">
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <div id="myLinks">
+          <a href="Shop.html">Shop</a>
+          <a href="About_us.html">About_us</a>
+          <a href="Sign.html">Sign in</a>
+        </div>
+      </div>
+
+      <div style="padding-left: 16px"></div>
+
+      <!-- End smartphone / tablet look -->
+    </div>   
+
+    <h2>Connection</h2>
+
+    <table style="width: 100%">
+      <tbody>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tfoot>
+
+        <tr>
+          <td>Kids Shop</td>
+          <td>Elliot Bruno</td>
+          <td>Sweden</td>
+          <td>Since 1939</td>
+        </tr>
+        <tr>
+          <td>Black Market</td>
+          <td>Solo Creator</td>
+          <td>Mexico</td>
+          <td>Updated 2023</td>
+        </tr>
+        </tfoot>
+      </tbody>
+    </table>
     <ul>
       <li>Adress</li>
       <a
@@ -37,29 +127,31 @@
       </a>
       <li>Number</li>
       <a>0793372248</a>
-      <li>Map</li>
+      <li><a href="https://ytterby.cylex.se/company/grundskola+ytterbyskolan-12066874.html">Map </a> <div id="map" href=""></div>
+        
+      </li>
     </ul>
 
-    <h2>Connection</h2>
-
-    <table style="width: 100%">
-      <tr>
-        <th>Company</th>
-        <th>Contact</th>
-        <th>Country</th>
-      </tr>
-      <tr>
-        <td>Kids Shop</td>
-        <td>Elliot Bruno</td>
-        <td>Sweden</td>
-      </tr>
-      <tr>
-        <td>Black Market</td>
-        <td>Solo Creator</td>
-        <td>Mexico</td>
-      </tr>
-    </table>
-
+    <script>
+      mapboxgl.accessToken = 'https://api.mapbox.com/styles/v1/{username}/{style_id}/static/{overlay}/{lon},{lat},{zoom},{bearing},{pitch}|{bbox}|{auto}/{width}x{height}{@2x}';
+      
+      function initMap() {
+        var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11', // Väljer en stil som passar tillbehov
+          center: [18.1524, 59.4239], // Anpassar centrumkoordinaterna till Ytterby plats
+          zoom: 15 // Justerar zoomnivån
+        });
+      
+        // Markör
+        var marker = new mapboxgl.Marker()
+          .setLngLat([18.1524, 59.4239]) // Koordinater
+          .addTo(map);
+      }
+      
+      // Kör initMap() när sidan har laddats
+      document.addEventListener('DOMContentLoaded', initMap);
+      </script>
     <footer>
       <div class="bottom">
         <a href="Contacts.html">Stay connected</a>
@@ -76,6 +168,6 @@
         </a>
       </div>
     </footer>
-    <script src="projekt.js"></script>
+    <script src="../css/projekt.js"></script>
   </body>
 </html>

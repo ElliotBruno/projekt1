@@ -2,28 +2,31 @@
   margin: 0;
 }
 
+body {
+  background-color: turquoise;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  background-image: url(../Images/da.png);
+  background-size: cover;
+}
+
 table,
 th,
 td {
-  border: 1px solid black;
+  border: 2px solid black;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Tilt+Prism&display=swap");
 
 body,
 html {
   height: 100%;
 }
 
-a {
-  margin-bottom: 20px;
-}
-
 /* The hero image */
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  /* Using "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../Images/DSC_1762.JPG);
 
@@ -45,6 +48,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: navy;
+  font-size: x-large;
 }
 
 body.kulor {
@@ -81,18 +85,12 @@ body.Mall {
   background-size: cover;
 }
 
-body.About_us {
-  background-image: url(../Images/1196485.webp);
-  background-size: cover;
-}
-
 .bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-  left: 0;
   height: 50px;
   background-color: cadetblue;
 }
@@ -101,7 +99,9 @@ body.About_us {
   text-decoration: none;
   transition: 3s;
   font-family: "Orbitron", sans-serif;
-  margin-right: 50px;
+
+  padding-left: 104px;
+  padding-right: 40px;
 }
 
 .item:hover {
@@ -109,14 +109,21 @@ body.About_us {
   color: firebrick;
 }
 
+.home {
+  height: 40px;
+  transition: 3s;
+}
+
+.home:hover {
+  font-size: x-large;
+}
+
 .Guns {
   display: flex;
-  column-gap: 3px;
 }
 
 .Ammo {
   display: flex;
-  column-gap: 3px;
   margin-left: 30px;
 }
 
@@ -126,6 +133,21 @@ body.About_us {
 
 .Packs {
   display: flex;
+}
+
+.Shop {
+  color: midnightblue;
+  padding-top: 12px;
+  padding-left: 50px;
+  padding-right: 250px;
+  text-decoration: none;
+  transition: 1s;
+  font-family: "Orbitron", sans-serif;
+}
+
+.Shop:hover {
+  color: blue;
+  text-transform: uppercase;
 }
 
 img {
@@ -138,25 +160,43 @@ h2,
 h3 {
   font-family: "Tilt Prism", cursive;
   columns: auto;
-  /* display: inline-block; */
-  margin-right: 395px;
+  margin-right: 134px;
 }
 
 h4 {
   line-height: 200%;
   margin-left: 370px;
   width: 45%;
-  margin-top: 150px;
-  margin-bottom: 70px;
+
   text-align: center;
-  color: midnightblue;
+}
+
+h5 {
+  line-height: 200%;
+  margin-left: 360px;
+  width: 45%;
+  margin-top: 20px;
+  font-size: medium;
+  text-align: center;
+}
+
+h6 {
+  line-height: 200%;
+  width: 75%;
+  margin-left: 130px;
+
+  font-size: large;
+  color: turquoise;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 p {
   width: 30%;
-  line-height: 120%;
   margin-top: 150px;
   text-align: center;
+  font-size: x-large;
 }
 
 label {
@@ -164,6 +204,26 @@ label {
   width: 100px;
   color: darkred;
   font-family: "Orbitron", sans-serif;
+}
+
+label:nth-child(1) {
+  color: firebrick;
+}
+
+label:nth-child(4) {
+  color: firebrick;
+}
+
+label:nth-child(5) {
+  color: orangered;
+}
+
+label:nth-child(8) {
+  color: orangered;
+}
+
+label:nth-child(11) {
+  color: goldenrod;
 }
 
 input[type="text"],
@@ -175,21 +235,7 @@ input[type="password"] {
 }
 
 section {
-  background-color: cornflowerblue;
   display: flex;
-}
-.Shop {
-  color: midnightblue;
-  padding-top: 12px;
-  padding-left: 50px;
-  padding-right: 250px;
-  text-decoration: none;
-  transition: 1s;
-  font-family: "Orbitron", sans-serif;
-}
-.Shop:hover {
-  color: blue;
-  text-transform: uppercase;
 }
 
 nav {
@@ -227,16 +273,48 @@ i {
   padding-top: 3%;
 }
 
-@media screen and (max-width: 415px) {
-  nav {
-    flex-direction: column;
-    background-color: dodgerblue;
-    padding-bottom: 0px;
-    padding-top: 0px;
+th {
+  color: red;
+  background-color: midnightblue;
+}
+
+th:nth-child(2) {
+  background-color: red;
+  color: midnightblue;
+}
+
+th:nth-child(3) {
+  background-color: black;
+}
+
+th:nth-child(4) {
+  background-color: dodgerblue;
+  color: darkblue;
+  font-family: "Orbitron", sans-serif;
+}
+
+tfoot {
+  background-color: royalblue;
+  color: aqua;
+}
+
+@media screen and (min-width: 1536px) {
+  .mobile-container {
+    display: none;
   }
+  .icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .home {
+    height: 70px;
+  }
+
   section {
     flex-direction: column;
-    background-color: darkred;
+    color: cadetblue;
   }
   footer {
     display: flex;
@@ -268,6 +346,7 @@ i {
     background-image: url(../Images/desktop-wallpaper-iphone-black-pattern-carbon-leather-metal.jpg);
     background-size: cover;
   }
+
   .Beyblades {
     width: 50%;
   }
@@ -296,26 +375,25 @@ i {
     font-family: "Orbitron", sans-serif;
   }
 
-  h4 {
-    margin-top: 320px;
-    padding-bottom: 50px;
-    margin-left: 120px;
-    color: royalblue;
-    line-height: 100%;
-    width: 1000%;
-  }
   h3 {
     margin-left: 70px;
   }
-  /* img {
-    width: 99%;
-  } */
 
   .Text {
     margin-right: 400px;
+  }
+  .item {
+    display: none;
+  }
+  button {
+    display: none;
   }
 }
 @media only screen and (max-width: 600px) {
+  .home {
+    height: 70px;
+  }
+
   nav {
     flex-direction: column;
     background-color: dodgerblue;
@@ -324,7 +402,7 @@ i {
   }
   section {
     flex-direction: column;
-    background-color: darkred;
+    background-color: cadetblue;
   }
   footer {
     display: flex;
@@ -384,26 +462,36 @@ i {
     font-family: "Orbitron", sans-serif;
   }
 
-  h4 {
-    margin-top: 320px;
-    padding-bottom: 50px;
-    margin-left: 120px;
-    color: royalblue;
-    line-height: 100%;
-    width: 1000%;
-  }
   h3 {
     margin-left: 70px;
   }
-  /* img {
-  width: 99%;
-} */
-
+  h6 {
+    width: 50%;
+    text-align: left;
+  }
   .Text {
-    margin-right: 400px;
+    width: 50%;
+    margin-left: -50px;
+  }
+  .item {
+    display: none;
+  }
+  button {
+    display: none;
   }
 }
+
 @media only screen and (max-width: 820px) {
+  .home {
+    height: 120px;
+  }
+
+  button {
+    display: none;
+  }
+  .item {
+    display: none;
+  }
   nav {
     flex-direction: column;
     background-color: dodgerblue;
@@ -412,7 +500,7 @@ i {
   }
   section {
     flex-direction: column;
-    background-color: darkred;
+    background-color: cadetblue;
   }
   footer {
     display: flex;
@@ -438,7 +526,7 @@ i {
   body.About_us {
     background-image: url(../Images/eb.gif);
     background-size: cover;
-    background-size: 99%;
+    background-size: 100%;
   }
   body.pokemon {
     background-image: url(../Images/desktop-wallpaper-iphone-black-pattern-carbon-leather-metal.jpg);
@@ -472,20 +560,32 @@ i {
     font-family: "Orbitron", sans-serif;
   }
 
-  h4 {
-    margin-top: 320px;
-    padding-bottom: 50px;
-    margin-left: 120px;
-    color: royalblue;
-    line-height: 100%;
-    width: 1000%;
-  }
   h3 {
     margin-left: 70px;
   }
-  /* img {
-width: 99%;
-} */
+
+  h4 {
+    margin-top: 662px;
+    color: royalblue;
+    line-height: 200%;
+    text-align: center;
+    width: 150%;
+    margin-left: 120px;
+    font-size: x-large;
+  }
+  h5 {
+    color: royalblue;
+    line-height: 200%;
+    text-align: center;
+    width: 150%;
+    margin-left: 120px;
+    font-size: x-large;
+    padding-bottom: 100px;
+  }
+
+  h6 {
+    font-size: x-large;
+  }
 
   .Text {
     margin-right: 400px;
